@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <style>
       html {
         scroll-behavior: smooth; 
@@ -85,7 +90,12 @@
               id="next"></i>
       </div>
  </section>
-
+ <div
+ class="overlay hidden fixed top-0 left-0 w-full h-full z-10 backdrop-blur-sm transition-all bg-black/80"
+></div>
+<div
+ class="details hidden modal fixed top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] p-12 transition-all z-20 flex-wrap overflow-auto h-[90%] w-[90%] bg-black text-white"
+></div>
     <script src="script.js"></script>
 </body>
 </html>
