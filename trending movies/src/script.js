@@ -1,3 +1,4 @@
+
 const checkAuth = () => {
     const user = localStorage.getItem('user');
     console.log(user);
@@ -105,11 +106,41 @@ function showMovies(data, category) {
     });
 }
 
+ function fetchSearchResults(query, callback) {
+            const url = `${BASE_URL}/search/multi?${API_KEY}&query=${encodeURIComponent(query)}`;
+
+            var xhr = new XMLHttpRequest();
+            xhr.addEventListener('readystatechange', function () {
+                if (this.readyState === 4) {
+                    if (this.status === 200) {
+                        var data = JSON.parse(this.response);
+                        callback(data.results);
+                    } else {
+                        console.error('Error fetching search results:', this.statusText);
+                        console.log(url)
+                    }
+                }
+            });
+
+            xhr.open('GET', url);
+            xhr.send();
+        }
+
 categorySelect.addEventListener('change', (event) => {
     selectedCategory = event.target.value;
     curr = 1; 
     getMovies(selectedCategory, showMovies, curr);
 });
+
+      searchButton.addEventListener('click', () => {
+            const query = searchInput.value.trim();
+            if (query) {
+                fetchSearchResults(query, (results) => showMovies(results, 'all'));
+            } else {
+                getMovies(selectedCategory, showMovies, curr); 
+            }
+        });
+
 
 nextBtn.addEventListener('click', () => {
     if (next <= totalPages) {
@@ -374,3 +405,4 @@ window.addEventListener("keyup", (e) => {
     }
     detailsPage.innerHTML = container;
   }
+
