@@ -30,7 +30,11 @@ var prev = 0;
 var lastUrl = '';
 var totalPages = 100;
 
-
+let logut=document.querySelector("#login-btn")
+logut.addEventListener("click",()=>{
+  localStorage.clear('user');
+  window.location.href='register.html';
+})
 function getMovies(category = 'all', callback, page = 1) {
     let url;
     switch (category) {
