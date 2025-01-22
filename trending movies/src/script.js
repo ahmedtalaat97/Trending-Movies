@@ -420,3 +420,4 @@ searchInput.addEventListener('keyup', (e) => {
   }
 });
 
+
