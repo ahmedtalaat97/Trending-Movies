@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Netplay</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdn.tailwindcss.com"></script>
+   
+    <link rel="stylesheet" href="output.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
     <style>
         html {
             scroll-behavior: smooth;
@@ -18,19 +22,22 @@
 
 <body class="bg-black text-white">
 
-    <header class="bg-[#141414] fixed top-0 w-full z-50 shadow-md bg-opacity-60">
-        <div class="container mx-auto flex items-center justify-center py-4 px-6">
-            <a href="#home" id="logo" class="text-2xl font-bold mr-20 text-red-600">
-                NETPLAY
-            </a>
-            <nav class="flex space-x-6 text-white">
-                <a href="#landing" class="hover:text-red-600 transition-all duration-300 ease-in-out">Home</a>
-                <a href="#contact" class="hover:text-red-600 transition-all duration-300 ease-in-out">Contact</a>
-                <a href="#login" id="login-btn" class="hover:text-red-600 transition-all duration-300 ease-in-out">Log
-                    out</a>
-            </nav>
-        </div>
-    </header>
+  <header class="bg-[#141414] fixed top-0 w-full z-50 shadow-md bg-opacity-60">
+      <div class="container mx-auto flex items-center justify-center py-4 px-6">
+          <a href="#home" id="logo" class="text-2xl font-bold mr-20 text-red-600">
+              NETPLAY
+          </a>
+          <nav class="flex space-x-6 text-white">
+              <a href="#landing" class="hover:text-red-600 transition-all duration-300 ease-in-out">Home</a>
+              <a href="#contact" class="hover:text-red-600 transition-all duration-300 ease-in-out">Contact</a>
+              <a href="" id="login-btn" class="hover:text-red-600 transition-all duration-300 ease-in-out">Log
+                  out</a>
+          </nav>
+      </div>
+  </header>
+
+
+  
 
     <section id="landing">
         <div class="video-ctr h-[100vh] relative">
@@ -54,37 +61,27 @@
         </div>
     </section>
 
-    <section id="home">
-        <div class="large-container flex justify-center items-center my-10">
-            <div class="search-container flex items-center gap-4">
-                <input type="text" id="search-bar" placeholder="Search . . ."
-                    class="bg-[#141414] text-white border border-gray-700 sm:w-96 shadow rounded-3xl px-4 py-2 focus:outline-none focus:ring-1 focus:ring-red-600">
-                <i id="searchButton"
-                    class="fa-solid fa-magnifying-glass text-xl px-4 sm:mr-4 cursor-pointer hover:text-red-600 transition-all duration-300 ease-in-out"></i>
-                <select name="category-select" id="category-select"
-                    class="bg-[#141414] text-white border border-gray-700 rounded-3xl px-4 py-2 focus:outline-none focus:ring-1 focus:ring-red-600">
-                    <option value="all">All</option>
-                    <option value="movie">Movies</option>
-                    <option value="tv">TV Shows</option>
-                    <option value="people">People</option>
-                </select>
-            </div>
-        </div>
-
-        <div id="main" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 px-20">
-            <!-- Trending content will appear here -->
-        </div>
-
-        <div id="pagination" class="flex justify-center items-center gap-2 p-10">
-            <i class="fa-solid fa-angle-left cursor-pointer hover:text-red-600 transition-all duration-300 ease-in-out"
-                id="prev"></i>
-            <div class="text-white" id="current"></div>
-            <i class="fa-solid fa-angle-right cursor-pointer hover:text-red-600 transition-all duration-300 ease-in-out"
-                id="next"></i>
-        </div>
-    </section>
 
 
-    <script src="./script.js"></script>
+      <div id="main">
+
+
+      </div>
+      <div id="pagination" class="flex justify-center items-center gap-2 p-10">
+          <i class="fa-solid fa-angle-left cursor-pointer hover:text-red-600 transition-all duration-300 ease-in-out"
+              id="prev"></i>
+          <div class="text-white" id="current"></div>
+          <i class="fa-solid fa-angle-right cursor-pointer hover:text-red-600 transition-all duration-300 ease-in-out"
+              id="next"></i>
+      </div>
+ </section>
+ <div
+ class="overlay hidden fixed top-0 left-0 w-full h-full z-10 backdrop-blur-sm transition-all bg-black/80"
+></div>
+<div
+ class="details hidden modal fixed top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] p-12 transition-all z-20 flex-wrap overflow-auto h-[90%] w-[90%] bg-black text-white"
+></div>
+    <script src="script.js"></script>
+
 </body>
 </html>
