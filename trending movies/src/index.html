@@ -21,8 +21,14 @@
         }
       </script>
 </head>
-<body class="bg-black text-white">
+<body>
+    
 
+<select name="" id="trending">
+    <option value="movie">movies</option>
+    <option value="tv">tv shows</option>
+    <option value="people">people</option>
+</select>
   <header class="bg-[#141414] fixed top-0 w-full z-50 shadow-md bg-opacity-60">
       <div class="container mx-auto flex items-center justify-center py-4 px-6">
           <a href="#home" id="logo" class="text-2xl font-bold mr-20 text-red-600">
@@ -39,63 +45,10 @@
 
 
 
-  <section id="landing">
-      <div class="video-ctr h-[100vh] relative">
-          <video src="vid2.mp4" id="videobg" loop autoplay muted class="w-full h-full object-cover"></video>
-          <div class="absolute inset-0 flex items-center justify-center pl-10">
-              <div class="text-center text-white">
-                  <h1 class="text-5xl font-bold mb-10 tracking-wider uppercase leading-[1.3] text-shadow-2xl">
-                      Catch Exclusive Premieres <br />
-                      Only on NetPlay
-                  </h1>
-                  <a href="#home"
-                      class="bg-red-700 hover:bg-black text-white font-bold uppercase mx-2 px-3 py-2 tracking-wider hover:shadow-lg transition-all duration-300">
-                      Browse Now
-                  </a>
-                  <a href=""
-                      class="bg-[#141414] bg-opacity-60 shadow-xl hover:bg-black text-white font-bold uppercase mx-2 px-4 py-2 tracking-wider hover:shadow-lg transition-all duration-300">
-                      More Info
-                  </a>
-              </div>
-          </div>
-      </div>
-</section>
 
-<section id="home">
 
-      <div class="large-container flex justify-center items-center my-10">
-          <div class="search-container">
-              <input type="text" id="search-bar" placeholder="Search . . ."
-                  class="bg-[#141414] text-white border border-gray-700 sm:w-96 shadow rounded-3xl px-4 py-2 focus:outline-none focus:ring-1 focus:ring-red-600">
-              <i
-                  class="fa-solid fa-magnifying-glass text-xl px-4 sm:mr-4 cursor-pointer hover:text-red-600 transition-all duration-300 ease-in-out"></i>
-              <select name="category-select" id="category-select"
-                  class="bg-[#141414] text-white border border-gray-700 rounded-3xl px-4 py-2 focus:outline-none focus:ring-1 focus:ring-red-600">
-                  <option value="all">All</option>
-                  <option value="movie">Movies</option>
-                  <option value="tv">TV Shows</option>
-                  <option value="people">People</option>
-              </select>
-          </div>
-      </div>
 
-      <div id="main">
 
-      </div>
-      <div id="pagination" class="flex justify-center items-center gap-2 p-10">
-          <i class="fa-solid fa-angle-left cursor-pointer hover:text-red-600 transition-all duration-300 ease-in-out"
-              id="prev"></i>
-          <div class="text-white" id="current"></div>
-          <i class="fa-solid fa-angle-right cursor-pointer hover:text-red-600 transition-all duration-300 ease-in-out"
-              id="next"></i>
-      </div>
- </section>
- <div
- class="overlay hidden fixed top-0 left-0 w-full h-full z-10 backdrop-blur-sm transition-all bg-black/80"
-></div>
-<div
- class="details hidden modal fixed top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] p-12 transition-all z-20 flex-wrap overflow-auto h-[90%] w-[90%] bg-black text-white"
-></div>
     <script src="script.js"></script>
 </body>
 </html>
