@@ -13,5 +13,5 @@
 <h3>you can use this trial email</h3>
 <p>aaa@yahoo.com</p> 
 <p>pw: 1111</p> 
-<h3>Careful.. you can't go to the landing without logging in cause of the validations </h3>
+<h3>Be careful—you can’t access the landing page without logging in due to the validations. </h3>
 <img src="https://github.com/user-attachments/assets/32504ef5-9615-423e-870c-3702cc7732a2"/>
