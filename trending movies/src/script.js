@@ -221,7 +221,7 @@ function movieDetails(dataDetails) {
                     <p class="ratenumber mr-1 pt-1 text-xl">${
                   Math.round(dataDetails.vote_average * 10) / 10
                     }</p>
-                    <img src="/star.png" alt="" class="w-[12%]">
+                    <img src="star.png" alt="" class="w-[12%]">
                   </div>
                   <div class="flex my-4">
                     <a target="_blank" href="https://www.imdb.com/title/${
